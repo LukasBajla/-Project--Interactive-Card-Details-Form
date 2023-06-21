@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <style>
+      .attribution {
+        margin: 2em 0;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: #600594;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="main-grid">
+        <div class="main_aside">
+          <div class="ref-card ref-card__front">
+            <img
+              class="card_img"
+              src="./images/bg-card-front.png"
+              alt="card front"
+              srcset=""
+            />
+            <img
+              class="card_logo"
+              src="./images/card-logo.svg"
+              alt="card logo"
+              srcset=""
+            />
+            <p id="ref-card-number" class="card_number">0000 0000 0000 0000</p>
+            <p id="ref-card-name" class="card_name">Name</p>
+            <div id="ref-card-exp" class="card_exp">
+              <span id="ref-card-exp-month">00</span>
+              <span>/</span>
+              <span id="ref-card-exp-year">00</span>
+            </div>
+          </div>
+          <div class="ref-card ref-card__back">
+            <img
+              class="card_img"
+              src="./images/bg-card-back.png"
+              alt="card back"
+              srcset=""
+            />
+            <p id="ref-card-cvc" class="card_cvc" aria-placeholder="CVC">CVC</p>
+          </div>
+        </div>
+        <div class="main_input">
+          <button id="btn-autocomplete" class="autocomplete hidden">Autocomplete</button>
+
+          <div class="input-form-cont">
+            <div class="input-item i-cardholder-name">
+              <p class="">cardholder name</p>
+              <input
+                type="text"
+                name="cardholder name"
+                id="card-name"
+                placeholder="e.g. Jane Appleseed"
+                class="i-100w"
+                autocomplete="off"
+              />
+            </div>
+            <div class="input-item i-card-number">
+              <p class="">card number</p>
+              <input
+                type="text"
+                name="card number "
+                id="card-number"
+                placeholder="e.g. 1234 5678 9123 0000"
+                class="i-100w"
+                maxlength="16"
+                autocomplete="off"
+              />
+            </div>
+            <div class="input-item i-exp-date">
+              <p class="">Exp. Date (MM/YY)</p>
+              <input
+                type="text"
+                name="exp month"
+                class="i-month"
+                id="card-month"
+                placeholder="MM"
+                maxlength="2"
+                autocomplete="off"
+              />
+              <input
+                type="text"
+                name="exp year"
+                class="i-year"
+                id="card-year"
+                placeholder="YY"
+                maxlength="2"
+                autocomplete="off"
+              />
+            </div>
+            <div class="input-item i-cvc">
+              <p class="">CVC</p>
+              <input
+                type="text"
+                name="CVC"
+                id="card-cvc"
+                placeholder="e.g. 123"
+                class="i-100w"
+                maxlength="3"
+                autocomplete="off"
+              />
+            </div>
+            <div class="input-item i-button">
+              <button id="btn-confirm" class="i-100w">Confirm</button>
+            </div>
+          </div>
+          <div class="input-success-cont hidden">
+            <img src="./images/icon-complete.svg" alt="" srcset="">
+            <div class="success-text">
+              <h1>Thank you!</h1>
+              <p>We've added your card details</p>
+            </div>
+            <button id="btn-continue" class="i-100w">Continue</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
