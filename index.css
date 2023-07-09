@@ -140,6 +140,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 main::before {
   content: "";
@@ -170,7 +171,6 @@ main::before {
   }
   main::before {
     background-image: url(./images/bg-main-mobile.png);
-
     width: 100vw;
     min-height: 15em;
   }
@@ -273,25 +273,13 @@ main::before {
   }
 }
 
-.autocomplete {
-  background-color: var(--clr-neutral-100);
-  color: var(--clr-neutral-10);
-  border: 1px solid var(--clr-neutral-10);
-  align-self: flex-end;
-  width: 40%;
-  font-size: var(--fs-200);
-}
-.autocomplete:hover {
-  color: var(--clr-neutral-80);
-  background-color: var(--clr-neutral-10);
-}
-
 .main_input {
   grid-column: 2/3;
   display: grid;
   place-items: center;
   /* display: flex; */
   justify-content: center;
+  margin-top: 2em;
 }
 .input-form-cont {
   display: grid;

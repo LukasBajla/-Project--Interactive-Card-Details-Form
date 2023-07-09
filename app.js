@@ -45,9 +45,11 @@ const App = {
 
       // Card Name - check only letters
       const cardNameRegexp = /^[a-zA-Z\s]*$/;
-      const cardNameOnlyLetters = cardNameRegexp.test(
+      const cardNameRegexpUnicode = /[\p{L}-]+/ug;
+      const cardNameOnlyLetters = cardNameRegexpUnicode.test(
         App.$.inputCardName.value
       );
+      console.log(cardNameOnlyLetters)
 
       if (!cardNameOnlyLetters) {
         App.$.inputCardName.classList.add("error-cont");
